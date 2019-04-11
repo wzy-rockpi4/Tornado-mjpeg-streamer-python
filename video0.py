@@ -91,7 +91,7 @@ class UsbCamera(object):
                 # resize image for speeding up recognize
                 gray = cv2.resize(image, (320, 240))
                 # make it grayscale
-                gray = cv2.cvtColor(gray, cv2.COLOR_YUV2GRAY_NV12)
+                gray = cv2.cvtColor(gray, cv2.COLOR_RGB2GRAY)
                 # face cascade detector
                 faces = self.face_cascade.detectMultiScale(gray)
                 # draw rect on face arias
